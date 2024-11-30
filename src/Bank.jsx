@@ -13,8 +13,8 @@ const bank = () => {
       alert("Please enter a valid deposit amount.");
       return;
     }
-    setTotalDeposit((prevDeposit) => prevDeposit + depositValue);
-    setTotalBalance((prevBalance) => prevBalance + depositValue);
+    setTotalDeposit((passDeposit) => passDeposit + depositValue);
+    setTotalBalance((passBalance) => passBalance + depositValue);
     setDepositAmount("");
   };
 
@@ -27,8 +27,8 @@ const bank = () => {
     if (withdrawValue > totalBalance) {
       alert("Insufficient Balance");
     } else {
-      setTotalWithdraw((prevWithdraw) => prevWithdraw + withdrawValue);
-      setTotalBalance((prevBalance) => prevBalance - withdrawValue);
+      setTotalWithdraw((passWithdraw) => passWithdraw + withdrawValue);
+      setTotalBalance((passBalance) => passBalance - withdrawValue);
       setWithdrawAmount("");
     }
   };
